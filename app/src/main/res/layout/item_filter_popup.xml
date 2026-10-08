@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_round_corner_30"
+            android:backgroundTint="@color/color_popup_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <TextView
+
+                style="@style/TextViewLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/select"
+                android:textAllCaps="true"
+                android:textColor="@color/color_theme_blue"
+                android:textSize="@dimen/ts_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginVertical="15dp"
+                android:alpha=".6"
+                android:background="@color/color_theme_blue" />
+
+
+            <LinearLayout
+                android:id="@+id/btn_locked"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_round_corner_500"
+                android:backgroundTint="@color/color_theme_blue"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_lock"
+                    app:tint="@color/color_popup_bg" />
+
+
+                <TextView
+
+                    style="@style/TextViewLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/locked"
+                    android:textColor="@color/color_popup_bg"
+                    android:textSize="@dimen/ts_15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_premium"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_purple_gradient_500"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_premium"
+                    app:tint="@color/color_text_primary" />
+
+
+                <TextView
+
+                    style="@style/TextViewLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/premium"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="@dimen/ts_15" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/btn_all"
+                style="@style/TextViewLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingVertical="5dp"
+                android:text="@string/all_wallpaper"
+                android:textColor="@color/color_theme_blue"
+                android:textSize="@dimen/ts_15" />
+
+
+        </LinearLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/btn_cancel"-->
+        <!--            android:layout_width="40dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:layout_alignParentEnd="true">-->
+
+        <!--            <include-->
+
+        <!--                layout="@layout/cancel_btn"-->
+        <!--                android:layout_width="40dp"-->
+        <!--                android:layout_height="40dp" />-->
+
+        <!--        </LinearLayout>-->
+
+
+    </RelativeLayout>
+
+
+</layout>

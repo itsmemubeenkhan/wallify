@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="something_went_wrong">कुछ गलत हो गया</string>
+    <string name="featured_items">फीचर्ड आइटम</string>
+    <string name="download_now">अभी डाउनलोड करें</string>
+    <string name="live">लाइव</string>
+    <string name="all">सभी</string>
+    <string name="new_">नया</string>
+    <string name="simple">सरल</string>
+    <string name="wallpaper">वॉलपेपर</string>
+    <string name="no_data_found">कोई डेटा नहीं मिला</string>
+    <string name="no_favourites">कोई पसंदीदा नहीं</string>
+    <string name="search_here">यहाँ खोजें</string>
+    <string name="no_data_for">कोई डेटा नहीं</string>
+    <string name="select">चुनें</string>
+    <string name="locked">लॉक किया गया</string>
+    <string name="premium">प्रीमियम</string>
+    <string name="all_wallpaper">सभी वॉलपेपर</string>
+    <string name="notification">सूचना</string>
+    <string name="rate_us">हमें रेटिंग दें</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="terms_amp_condition">नियम और शर्तें</string>
+    <string name="restore_purchases">खरीदारी बहाल करें</string>
+    <string name="restore">बहाल करें</string>
+    <string name="enjoy_all_premium_features_for_a_full_year_and_best_price">पूरे साल के लिए सभी प्रीमियम सुविधाओं का आनंद लें और सबसे अच्छी कीमत</string>
+    <string name="why_go_with">क्यों</string>
+    <string name="become_a">बनें</string>
+    <string name="are_you_sure">क्या आप निश्चित हैं?</string>
+    <string name="delete_my_account">मेरा खाता हटाएं</string>
+    <string name="access_to_premium_content_ad_free_experience_for_month">महीने भर के लिए प्रीमियम सामग्री और विज्ञापन-मुक्त अनुभव तक पहुँच</string>
+    <string name="subscribe_to">सदस्यता लें</string>
+    <string name="subscribe_to_pro_version_and_enjoy_nexclusive_benefits_listed_below">प्रो संस्करण की सदस्यता लें और नीचे सूचीबद्ध विशेष लाभों का आनंद लें</string>
+    <string name="monthly">मासिक</string>
+    <string name="yearly">वार्षिक</string>
+    <string name="policy_text">3 दिन के निःशुल्क परीक्षण के बाद, यह सदस्यता योजना के अनुसार स्वचालित रूप से नवीनीकृत हो जाती है। सदस्यता स्वचालित रूप से नवीनीकृत हो जाएगी जब तक कि वर्तमान अवधि के अंत से 24 घंटे पहले रद्द न कर दिया जाए। आप अपनी Google Play खाता सेटिंग से कभी भी अपनी सदस्यता प्रबंधित और रद्द कर सकते हैं।</string>
+    <string name="subscribe">सदस्यता लें</string>
+    <string name="fully_ad_free_experience">पूरी तरह से विज्ञापन मुक्त अनुभव</string>
+    <string name="access_to_all_the_premium_tracks">सभी प्रीमियम ट्रैक तक पहुँच</string>
+    <string name="technical_support">तकनीकी सहायता</string>
+    <string name="terms_of_use">उपयोग की शर्तें</string>
+    <string name="download">डाउनलोड करें</string>
+    <string name="preview">पूर्वावलोकन करें</string>
+    <string name="saved_to_gallery">गैलरी में सहेजा गया</string>
+    <string name="there_is_no_subscriptions">पुनर्स्थापित करने के लिए कुछ भी नहीं</string>
+    <string name="subscriptions_restored_successfully">सदस्यता सफलतापूर्वक बहाल की गई</string>
+    <string name="enjoy_access_to_all_premium_wallpapers_with_ad_free_experience">विज्ञापन-मुक्त अनुभव के साथ सभी प्रीमियम वॉलपेपर तक पहुँच का आनंद लें।</string>
+    <string name="apply">लागू करें</string>
+    <string name="wallpaper_added_successfully">वॉलपेपर सफलतापूर्वक जोड़ा गया</string>
+    <string name="setting_wallpaper_is_not_allowed">वॉलपेपर सेट करने की अनुमति नहीं है</string>
+    <string name="set_wallpaper_as">वॉलपेपर को इस रूप में सेट करें?</string>
+    <string name="home_screen_only">केवल होम स्क्रीन</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="lock_screen_only">केवल लॉक स्क्रीन</string>
+    <string name="home_lock_screen">होम और लॉक स्क्रीन</string>
+    <string name="unlock_exclusive_wallpaper">अनन्य वॉलपेपर अनलॉक करें</string>
+    <string name="watch_a_quick_ad_to_get_awesome_wallpaper_for_your_device_it_ll_make_your_screen_look_amazing">अपने डिवाइस के लिए शानदार वॉलपेपर पाने के लिए एक त्वरित विज्ञापन देखें। यह आपकी स्क्रीन को अद्भुत बना देगा!</string>
+    <string name="watch_ad_amp_download">विज्ञापन देखें और डाउनलोड करें</string>
+    <string name="watch_ad_amp_apply">विज्ञापन देखें और लागू करें</string>
+    <string name="please_type_something">कृपया कुछ लिखें…</string>
+    <string name="languages">भाषाएँ</string>
+    <string name="done">हो गया</string>
+
+</resources>

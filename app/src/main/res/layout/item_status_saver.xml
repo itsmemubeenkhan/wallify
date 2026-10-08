@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/bg_round_corner_30"
+        android:clipToOutline="true">
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/sample_image_2" />
+
+        <TextView
+            android:id="@+id/tv_video"
+            style="@style/TextViewLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_round_corner_500"
+            android:backgroundTint="@color/black_40"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="VIDEO"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/ts_12"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/btn_save"
+        style="@style/TextViewLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_round_corner_500"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:text="@string/save"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ts_12" />
+
+</LinearLayout>

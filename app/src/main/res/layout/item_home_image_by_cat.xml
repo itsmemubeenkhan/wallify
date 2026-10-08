@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.retrytech.ledgeapp.utils.Global" />
+
+        <variable
+            name="is_fav"
+            type="Boolean" />
+
+        <variable
+            name="model"
+            type="com.retrytech.ledgeapp.model.SettingData.WallpapersItem" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/root_lout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/img_wall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:image_url="@{model.wallpaperType==0?model.content:model.thumbnail}"
+                app:roundPercent=".3"
+                tools:src="@drawable/sample_image_2" />
+
+            <TextView
+                android:id="@+id/tv_download_count"
+                style="@style/TextViewLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_round_corner_500"
+                android:backgroundTint="@color/black_40"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="5dp"
+                android:text="0 downloads"
+                android:textSize="@dimen/ts_10"
+                tools:visibility="visible" />
+
+            <TextView
+                style="@style/TextViewLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_round_corner_500"
+                android:backgroundTint="@color/black_40"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:text="@string/live"
+                android:visibility="@{model.wallpaperType==0?View.GONE:View.VISIBLE}"
+                tools:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_round_corner_500"
+                    android:backgroundTint="@color/color_theme_blue"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_premium"
+                    android:visibility="@{model.accessType==0?View.VISIBLE:View.GONE}" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_round_corner_500"
+                    android:backgroundTint="@color/color_theme_blue"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_lock"
+                    android:visibility="@{model.accessType==1?View.VISIBLE:View.GONE}" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_round_corner_500"
+                android:backgroundTint="@color/color_theme_blue"
+                android:layout_margin="15dp">
+
+
+                <ImageView
+                    android:id="@+id/ic_fav_yes"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="10dp"
+                    android:src="@{ is_fav ? @drawable/ic_fav_yes :@drawable/ic_fav}" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

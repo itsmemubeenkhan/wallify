@@ -1,0 +1,43 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('global_settings', function (Blueprint $table) {
+            if (!Schema::hasColumn('global_settings', 'featured_media')) {
+                $table->string('featured_media')->nullable()->after('splash_media_type');
+            }
+            if (!Schema::hasColumn('global_settings', 'featured_media_type')) {
+                $table->string('featured_media_type')->nullable()->after('featured_media');
+            }
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('global_settings', function (Blueprint $table) {
+            if (Schema::hasColumn('global_settings', 'featured_media_type')) {
+                $table->dropColumn('featured_media_type');
+            }
+            if (Schema::hasColumn('global_settings', 'featured_media')) {
+                $table->dropColumn('featured_media');
+            }
+        });
+    }
+};
+

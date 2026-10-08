@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "521329716270",
+    "project_id": "wallify-83d26",
+    "storage_bucket": "wallify-83d26.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521329716270:android:31d9ad2a029bbfa4a603bf",
+        "android_client_info": {
+          "package_name": "com.moxols.wallify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSAqp58bvESGgq3hJHAOEsJ11D9EOPyl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_2">#05000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_50">#4DFFFFFF</color>
+
+
+    <color name="color_theme_blue">#212424</color>
+    <color name="color_theme_blue_70">#B3212424</color>
+    <color name="color_theme_blue_50">#80212424</color>
+    <color name="color_theme_blue_20">#33212424</color>
+
+    <color name="color_theme_purple_light">#A160E5</color>
+    <color name="color_theme_purple_dark">#541B8F</color>
+    <color name="color_blur_25">#403B396D</color>
+    <color name="color_like">#FF5B5B</color>
+    <color name="color_premium">#FF7D05</color>
+    <color name="color_dialogue_bg">#D0D7FF</color>
+
+
+    <color name="color_text_primary">#FFFFFFFF</color>
+    <color name="color_text_primary_80">#CCFFFFFF</color>
+    <color name="color_text_secondary">#C6C6C6</color>
+    <color name="color_text_tertiary">#575B6B</color>
+    <color name="color_text_hint">#40FFFFFF</color>
+    <color name="color_text_black">#000000</color>
+
+
+    <color name="color_popup_bg">#D0D7FF</color>
+    <color name="color_shimmer">#2A2845</color>
+
+
+</resources>

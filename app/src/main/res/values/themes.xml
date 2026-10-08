@@ -1,0 +1,57 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Sphere20" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/color_theme_blue</item>
+        <item name="colorSecondary">@color/color_theme_purple_dark</item>
+        <item name="colorAccent">@color/color_theme_purple_dark</item>
+
+
+        <item name="colorOnBackground">@color/color_theme_blue</item>
+        <item name="background">@color/color_theme_blue</item>
+        <item name="android:supportsRtl">true</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+
+
+    </style>
+
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+
+    </style>
+
+
+    <style name="TextViewLocal" parent="android:Widget.TextView">
+        <item name="android:textDirection">locale</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_text_primary</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+
+
+    </style>
+
+    <style name="EditTextLocal" parent="android:Widget.EditText">
+        <item name="android:textDirection">locale</item>
+        <item name="android:textColor">@color/color_text_primary</item>
+        <item name="android:textColorHint">@color/color_text_hint</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+
+
+    </style>
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/color_theme_purple_light</item>
+    </style>
+
+</resources>

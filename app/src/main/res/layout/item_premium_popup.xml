@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+
+
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_round_corner_30"
+            android:backgroundTint="@color/color_popup_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_premium_crown" />
+
+            <TextView
+                style="@style/TextViewLocal"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text='@{@string/subscribe_to+" "+@string/pro}'
+
+                android:textColor="@color/color_theme_blue"
+
+                android:textSize="@dimen/ts_18" />
+
+            <TextView
+                style="@style/TextViewLocal"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="@string/enjoy_access_to_all_premium_wallpapers_with_ad_free_experience"
+                android:textColor="@color/color_text_tertiary"
+
+                android:textSize="@dimen/ts_14"
+
+                />
+
+
+            <TextView
+                style="@style/TextViewLocal"
+                android:id="@+id/btn_subscribe"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_purple_gradient_500"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text='@{@string/become_a+" "+@string/pro}'
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/ts_14" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_cancel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true">
+
+            <include
+
+                layout="@layout/cancel_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>
