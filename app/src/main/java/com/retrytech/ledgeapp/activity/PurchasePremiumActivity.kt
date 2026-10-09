@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.QueryProductDetailsParams
-import com.android.billingclient.api.ProductDetailsResponseListener
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.BillingResult
 import com.google.common.collect.ImmutableList
@@ -97,12 +96,8 @@ class PurchasePremiumActivity : BaseActivity() {
             )
             .build()
         myPlayStoreBilling.billingClient.queryProductDetailsAsync(
-            queryProductDetailsParams,
-            object : ProductDetailsResponseListener {
-                override fun onProductDetailsResponse(
-                    billingResult: BillingResult,
-                    productDetailsList: List<ProductDetails>
-                ) {
+            queryProductDetailsParams
+        ) { billingResult, productDetailsList ->
                     Log.i("TAG", "onProductDetailsResponse:  $productDetailsList")
                     if (productDetailsList.isNotEmpty()) {
                         val productDetails = productDetailsList[0]
@@ -117,9 +112,7 @@ class PurchasePremiumActivity : BaseActivity() {
                             binding.tvMonthPrice.text = listOfSubs[0].price + "$"
                         }
                     }
-                }
-            }
-        )
+        }
     }
 
     fun getYearlyData(productid: String?) {
