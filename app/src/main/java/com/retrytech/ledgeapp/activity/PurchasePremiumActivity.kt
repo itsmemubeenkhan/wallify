@@ -97,7 +97,8 @@ class PurchasePremiumActivity : BaseActivity() {
             .build()
         myPlayStoreBilling.billingClient.queryProductDetailsAsync(
             queryProductDetailsParams
-        ) { billingResult: BillingResult, productDetailsList: List<ProductDetails> ->
+        ) { billingResult: BillingResult, result: com.android.billingclient.api.QueryProductDetailsResult ->
+                    val productDetailsList = result.productDetailsList
                     Log.i("TAG", "onProductDetailsResponse:  $productDetailsList")
                     if (productDetailsList.isNotEmpty()) {
                         val productDetails = productDetailsList[0]
@@ -128,7 +129,8 @@ class PurchasePremiumActivity : BaseActivity() {
             .build()
         myPlayStoreBilling.billingClient.queryProductDetailsAsync(
             queryProductDetailsParams
-        ) { billingResult: BillingResult, list: List<ProductDetails> ->
+        ) { billingResult: BillingResult, result: com.android.billingclient.api.QueryProductDetailsResult ->
+            val list = result.productDetailsList
             Log.i("TAG", "onProductDetailsResponse:  $list")
             if (list.isNotEmpty()) {
                 Log.i("TAG", "onConnected:  inside service" + list[0])
