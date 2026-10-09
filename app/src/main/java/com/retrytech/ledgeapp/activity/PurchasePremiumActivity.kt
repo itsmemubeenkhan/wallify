@@ -97,7 +97,7 @@ class PurchasePremiumActivity : BaseActivity() {
             .build()
         myPlayStoreBilling.billingClient.queryProductDetailsAsync(
             queryProductDetailsParams
-        ) { billingResult, productDetailsList ->
+        ) { billingResult: BillingResult, productDetailsList: List<ProductDetails> ->
                     Log.i("TAG", "onProductDetailsResponse:  $productDetailsList")
                     if (productDetailsList.isNotEmpty()) {
                         val productDetails = productDetailsList[0]
@@ -128,9 +128,9 @@ class PurchasePremiumActivity : BaseActivity() {
             .build()
         myPlayStoreBilling.billingClient.queryProductDetailsAsync(
             queryProductDetailsParams
-        ) { billingResult, list ->
+        ) { billingResult: BillingResult, list: List<ProductDetails> ->
             Log.i("TAG", "onProductDetailsResponse:  $list")
-            if (!list.isEmpty()) {
+            if (list.isNotEmpty()) {
                 Log.i("TAG", "onConnected:  inside service" + list[0])
                 runOnUiThread {
                     binding.tvYearPrice.text =
