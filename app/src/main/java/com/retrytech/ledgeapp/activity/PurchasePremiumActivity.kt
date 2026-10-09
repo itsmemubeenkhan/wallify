@@ -8,6 +8,9 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.QueryProductDetailsParams
+import com.android.billingclient.api.ProductDetailsResponseListener
+import com.android.billingclient.api.ProductDetails
+import com.android.billingclient.api.BillingResult
 import com.google.common.collect.ImmutableList
 import com.retrytech.ledgeapp.R
 import com.retrytech.ledgeapp.databinding.ActivityPurchasePremiumBinding
@@ -94,24 +97,29 @@ class PurchasePremiumActivity : BaseActivity() {
             )
             .build()
         myPlayStoreBilling.billingClient.queryProductDetailsAsync(
-            queryProductDetailsParams
-        ) { billingResult, list ->
-            Log.i("TAG", "onProductDetailsResponse:  $list")
-            if (!list.isEmpty()) {
-                Log.i("TAG", "onConnected:  inside service" + list[0])
-                runOnUiThread {
-                    binding.tvMonthPrice.text =
-                        list[0].subscriptionOfferDetails!![0].pricingPhases
-                            .pricingPhaseList[0].formattedPrice
-
+            queryProductDetailsParams,
+            object : ProductDetailsResponseListener {
+                override fun onProductDetailsResponse(
+                    billingResult: BillingResult,
+                    productDetailsList: List<ProductDetails>
+                ) {
+                    Log.i("TAG", "onProductDetailsResponse:  $productDetailsList")
+                    if (productDetailsList.isNotEmpty()) {
+                        val productDetails = productDetailsList[0]
+                        Log.i("TAG", "onConnected:  inside service$productDetails")
+                        runOnUiThread {
+                            binding.tvMonthPrice.text =
+                                productDetails.subscriptionOfferDetails?.get(0)?.pricingPhases
+                                    ?.pricingPhaseList?.get(0)?.formattedPrice ?: ""
+                        }
+                    } else {
+                        runOnUiThread {
+                            binding.tvMonthPrice.text = listOfSubs[0].price + "$"
+                        }
+                    }
                 }
-            } else {
-                runOnUiThread {
-                    binding.tvMonthPrice.text = listOfSubs[0].price + "$"
-                }
-
             }
-        }
+        )
     }
 
     fun getYearlyData(productid: String?) {
